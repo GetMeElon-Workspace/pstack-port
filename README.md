@@ -60,6 +60,20 @@ This is a faithful port: skills are copied verbatim from upstream plus light edi
 
 [michael-denyer/pstack-claude](https://github.com/michael-denyer/pstack-claude) is an older Claude Code port of pstack (v0.9.x era). Its `plugins/pstack` subdirectory can be installed on Devin through the `.claude-plugin` manifest fallback. This repo is a Devin-native port of the latest upstream (v0.15.15) with the canonical `.devin-plugin` layout, vendored dependencies, and a rewritten README.
 
+## Updating from upstream
+
+This repo tracks [cursor/plugins](https://github.com/cursor/plugins) `pstack/`. To resync:
+
+```bash
+scripts/sync-upstream.sh           # upstream main, or pass a tag/SHA to pin
+```
+
+The script re-copies upstream files, re-applies the Devin transforms (frontmatter flag removal, name normalizations, manifest regeneration), and prints the synced SHA plus a review list. Provenance, the file map, and the transform list live in [UPSTREAM.md](./UPSTREAM.md).
+
+## Ports
+
+The repo root stays the Devin plugin. Variants for other ecosystems (claude, codex) can join under `ports/<target>/` as valid plugins for their own target without changing the Devin install path.
+
 ## Upstream and license
 
 Upstream: [cursor/plugins pstack](https://github.com/cursor/plugins/tree/main/pstack), MIT, author Lauren Tan. Vendored skills: [cursor/plugins cursor-team-kit](https://github.com/cursor/plugins/tree/main/cursor-team-kit), MIT. See [LICENSE](./LICENSE).
