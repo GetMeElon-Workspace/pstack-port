@@ -127,6 +127,9 @@ import json, sys
 CURSOR_ONLY = {"logo", "category", "tags", "skills", "agents"}
 src, dst = sys.argv[1], sys.argv[2]
 manifest = {k: v for k, v in json.load(open(src)).items() if k not in CURSOR_ONLY}
+# The port keeps its own plugin name; only version/metadata tracks upstream.
+manifest["name"] = "pstack-port"
+manifest["displayName"] = "pstack-port"
 with open(dst, "w") as fh:
     json.dump(manifest, fh, indent=2, ensure_ascii=False)
     fh.write("\n")

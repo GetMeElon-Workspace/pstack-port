@@ -20,31 +20,31 @@ A Devin-native port of [pstack](https://github.com/cursor/plugins/tree/main/psta
 
 ```bash
 # From GitHub (this repo is a single plugin at the root)
-devin plugins install GetMeElon-Workspace/pstack
+devin plugins install GetMeElon-Workspace/pstack-port
 
 # Or a local checkout, for authoring: edits apply live, no update step
-git clone https://github.com/GetMeElon-Workspace/pstack.git
+git clone https://github.com/GetMeElon-Workspace/pstack-port.git
 devin plugins install --local ./pstack
 ```
 
-Skills appear as `/pstack:<skill>` slash commands and are also picked up automatically when a skill description matches the task.
+Skills appear as `/pstack-port:<skill>` slash commands and are also picked up automatically when a skill description matches the task.
 
 ### Devin Cloud
 
 In the web app, open your organization's plugin management (Customize) and install from the GitHub repo URL:
 
 ```
-https://github.com/GetMeElon-Workspace/pstack
+https://github.com/GetMeElon-Workspace/pstack-port
 ```
 
-Because the plugin lives at the repository root, the plain repo URL installs it directly. Tree URLs that pin a subdirectory also work if this plugin is ever moved under a folder, for example `https://github.com/GetMeElon-Workspace/pstack/tree/main/plugins/pstack` (not needed today).
+Because the plugin lives at the repository root, the plain repo URL installs it directly. Tree URLs that pin a subdirectory also work if this plugin is ever moved under a folder, for example `https://github.com/GetMeElon-Workspace/pstack-port/tree/main/plugins/pstack` (not needed today).
 
 ## Get started
 
-1. Run `/pstack:setup-pstack` to pick a reasoning budget and choose models.
-2. Use `/pstack:poteto-mode` whenever a task needs rigor.
+1. Run `/pstack-port:setup-pstack` to pick a reasoning budget and choose models.
+2. Use `/pstack-port:poteto-mode` whenever a task needs rigor.
 
-The [pstack guide](./docs/guide/README.md) walks a first real task end to end: setup, prompting, verification, and overnight runs. Unsure which skill fits? Ask `/pstack:poteto-help`.
+The [pstack guide](./docs/guide/README.md) walks a first real task end to end: setup, prompting, verification, and overnight runs. Unsure which skill fits? Ask `/pstack-port:poteto-help`.
 
 ## Compatibility notes
 
